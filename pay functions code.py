@@ -2,10 +2,10 @@
 #Calculate Pay
 #18/11/14
 
-def hours_and_pay(hours,pay):
+def input_hours_and_pay():
     work_hours = int(input("Please enter your hours worked: "))
     work_pay = float(input("Please enter your Pay Rate: "))
-    return total
+    return work_hours, work_pay
 
 def calculate_basic_pay(hours,pay):
     total = hours * pay
@@ -22,14 +22,16 @@ def calculate_total_pay(hours,pay):
         total = calculate_overtime_pay(hours,pay)
     return total
 
-def display_result(total):
-    print("Your total pay {0}".format(calculate_total_pay))
+def calculatepay():
+    hours,pay = input_hours_and_pay()
+    totalPay = calculate_total_pay(hours,pay)
+    display_total_pay(totalPay)
+
+    
+def display_total_pay(total):
+    print("Your total pay £{0}".format(total))
 
 
 
 #main program
-
-
-
-
-
+calculatepay()
