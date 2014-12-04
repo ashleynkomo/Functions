@@ -1,10 +1,27 @@
 #Ashley Nkomo
 #revision exercise 1
-#02-12-14
+#04-12-14
 
-def user_input():
-    character = input("Please enter a character
+
+def input_character():
+    character = input("Please enter a character: ")
+    return character
+
+
+def input_number():
     number = int(input("Please enter the number of times to dublicate a character: "))
-    return character, number
+    return number
+                      
 
-def output symbols
+def output_symbols(number,character):
+    print( number * character)
+
+def coolrunnings():
+    character = input_character()
+    number = input_number()
+    output_symbols(number,character)
+
+
+#main program
+
+coolrunnings()
